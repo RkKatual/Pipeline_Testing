@@ -16,7 +16,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run MendPOC
         run: |
-          python test.py
+          python vulnerable-flask-app.py
 
       - name: Download Mend CLI & Run an image Scan
         env:
