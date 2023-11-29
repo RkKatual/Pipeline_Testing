@@ -1,7 +1,11 @@
 name: Manual workflow
 on:
   workflow_dispatch: 
-
+env:
+  DOCKER_IMAGE_NAME: my-example-app:${{ github.run_number }}
+  MEND_USER_KEY: ${{ secrets.MEND_USER_KEY }}
+  MEND_URL: ${{ vars.MEND_URL }}
+  MEND_EMAIL: ${{ vars.MEND_EMAIL }}
 jobs:
   MendPOCpython:
     runs-on: ubuntu-latest
@@ -18,4 +22,9 @@ jobs:
       - name: Run MendPOC
         run: |
           python test.py
+          - name: Download Mend CLI & Run an image Scan
+          run: |
+              curl -LO https://downloads.mend.io/production/unified/latest/linux_amd64/mend
+              chmod +x mend
+              ./mend image $DOCKER_IMAGE_NAME    
 
