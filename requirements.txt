@@ -1,7 +1,5 @@
-os
 argparse==1.4.0
 regex==2023.10.3
-time==0.3.0
 html==1.16.0
 base64==1.0.0
 pickle==1.0.0
@@ -10,9 +8,9 @@ subprocess==1.0.0
 sys==1.0.0
 string==1.0.0
 random==1.0.0
-mimetypess==2.0.0
+mimetypes==3.0.0  # Updated 'mimetypess' to 'mimetypes'
 posixpath==1.0.0
-subprocess==1.0.0
 http.cookies==2.0.0
 urllib.parse==1.0.0
 xml.etree.ElementTree==1.0.0
+
