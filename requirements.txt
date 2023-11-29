@@ -16,4 +16,3 @@ subprocess==1.0.0
 http.cookies==2.0.0
 urllib.parse==1.0.0
 xml.etree.ElementTree==1.0.0
-```
