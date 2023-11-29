@@ -17,5 +17,5 @@ jobs:
           pip install -r requirements.txt
       - name: Run MendPOC
         run: |
-          python dsvpwa.py
+          python test.py
 
